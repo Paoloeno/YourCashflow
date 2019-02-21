@@ -1,0 +1,46 @@
+<form name="expanseForm">
+  <table class="mx-auto">
+
+    <tr>
+      <th colspan="2">Expanse</th>
+    </tr>
+    <tr>
+      <td>Name:</td>
+      <td><input id="expanseName"></td>
+    </tr>
+    <tr>
+      <td>CategoryID:</td>
+      <td><input id="expanseCategoryID"></td>
+    </tr>
+    <tr>
+      <td>Describtion:</td>
+      <td><input id="expanseDescribtion"></td>
+    </tr>
+    <tr>
+      <td>Amount:</td>
+      <td><input id="expanseAmount"></td>
+    </tr>
+    <tr>
+      <td>Date:</td>
+      <td><input id="dateOfTransaction"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button type="button" (click)="createExpanse()" class="btn btn-primary container-fluid">Add Expanse</button>
+      </td>
+    </tr>
+
+    <tr>
+      <td>ID:</td>
+      <td><input id="id"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button type="button" (click)="deleteExpanse()" class="btn btn-danger container-fluid">Delete Expanse</button>
+      </td>
+    </tr>
+
+  </table>
+</form>

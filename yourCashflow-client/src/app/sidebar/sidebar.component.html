@@ -1,0 +1,34 @@
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h3><a routerLink="/">Your Cashflow</a></h3>
+  </div>
+
+  <ul class="list-unstyled components">
+    <p>Wydatki</p>
+    <li class="active">
+      <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Kategorie</a>
+      <ul class="collapse list-unstyled" id="homeSubmenu">
+
+        <li *ngFor="let category of categories">
+          <!-- <a routerLink="/Category-Overview/{{category.id}}">{{category.name}}</a> -->
+          <a [routerLink]="['/Category-Overview', category.id]">{{category.name}}</a>
+        </li>
+
+        <li>
+          <button type="button" class="btn btn-light container-fluid p-1" routerLink="add-category">Dodaj</button>
+        </li>
+      </ul>
+    </li>
+    <li class="active">
+      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Zestawienia</a>
+      <ul class="collapse list-unstyled" id="pageSubmenu">
+        <li>
+          <a href="#">Zestawienie kategorii</a>
+        </li>
+        <li>
+          <a href="#">Zestawienie całościowe</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
