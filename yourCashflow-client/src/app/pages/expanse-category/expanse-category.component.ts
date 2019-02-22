@@ -16,7 +16,8 @@ import { ExpanseService } from '../expanse/expanse.service';
 export class ExpanseCategoryComponent implements OnInit, OnDestroy{
 
 private expanseCategory: ExpanseCategory = new ExpanseCategory("", 0,"");
-private expanses: Expanse[];
+private expanses: Expanse[] = new Array();
+private totalAmount: Number = 0;
 
   id: number;
   private sub: any;
@@ -44,6 +45,14 @@ private expanses: Expanse[];
 
   findExpansesByCategoryId(id: number){
     this.expanseService.findByCategoryId(id).then(
-      expanses => this.expanses = expanses);
+      expanses => {this.expanses = expanses;
+                  this.totalAmount = 0;
+                  this.countTotal(this.expanses);});
+  }
+
+  countTotal(expanses: Expanse[]){
+    for(var i = 0; i < expanses.length; i++) {
+      this.totalAmount += expanses[i].amount;
+    }
   }
 }

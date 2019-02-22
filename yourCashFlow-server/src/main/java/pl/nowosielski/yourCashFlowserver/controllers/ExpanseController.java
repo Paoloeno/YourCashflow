@@ -33,4 +33,11 @@ public class ExpanseController {
         System.out.println(expanses);
         return expanses;
     }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public Expanse deleteCategory(@PathVariable Long id) {
+        Expanse expanse = expanseRepository.findById(id).get();
+        expanseRepository.delete(expanse);
+        return expanse;
+    }
 }

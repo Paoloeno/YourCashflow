@@ -16,7 +16,7 @@ export class ExpanseCategoryService {
     let categoryHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.http.post(this.apiUrl, JSON.stringify(category), { headers: categoryHeaders })
       .toPromise()
-      .then(response => {console.log(response)});
+      .then(response => {console.log(response);window.location.reload();});
    }
 
    deleteCategory(id: number): Promise<void> {

@@ -10,6 +10,9 @@ import { ExpanseCategoryComponent } from './pages/expanse-category/expanse-categ
 import { ExpanseComponent } from './pages/expanse/expanse.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AddCategoryComponent } from './pages/expanse-category/add-category/add-category.component';
+import { AddExpanseComponent } from './pages/expanse-category/add-expanse/add-expanse.component';
+import { FirstCapitalPipe } from './pipes/first-capital.pipe';
+import { DeleteExpanseComponent } from './pages/expanse-category/delete-expanse/delete-expanse.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { AddCategoryComponent } from './pages/expanse-category/add-category/add-
     ExpanseCategoryComponent,
     ExpanseComponent,
     SidebarComponent,
-    AddCategoryComponent
+    AddCategoryComponent,
+    AddExpanseComponent,
+    FirstCapitalPipe,
+    DeleteExpanseComponent
   ],
   imports: [
     BrowserModule,
