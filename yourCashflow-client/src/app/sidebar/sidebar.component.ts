@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ExpanseCategory } from '../pages/expanse-category/expanse-category';
-import { ExpanseCategoryService } from '../pages/expanse-category/expanse-category.service';
 import { Router } from '@angular/router';
+
+import { ExpanseCategory } from '../content-expanse-category/expanse-category/expanse-category';
+import { ExpanseCategoryService } from '../content-expanse-category/expanse-category/expanse-category.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -20,8 +21,8 @@ export class SidebarComponent implements OnInit {
   }
 
   getAllCategories() {
-      this.expanseCategoryService.getCategories().then(
-        categories => {this.categories = categories;},
-        err => {console.log(err);});
+    this.expanseCategoryService.getCategories().then(
+      categories => {this.categories = categories;},
+      err => {console.log(err);});
     }
-}
+  }

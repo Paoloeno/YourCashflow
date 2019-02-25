@@ -1,0 +1,20 @@
+<h4>Dodaj nową kategorię wydatków</h4>
+
+<form (ngSubmit)="onSubmit()" class="mx-auto p-3" #formDetails="ngForm">
+  <div style="display: inline-grid">
+
+    <label for="categoryName">Nazwa:</label>
+    <input [(ngModel)]="category.name" type="text" id="categoryName" name="categoryName" required><br>
+
+    <label for="categoryUserId">Użytkownik:</label>
+    <select [(ngModel)]="category.userId" id="categoryUserId" name="categoryUserId" required>
+      <option *ngFor="let user of userList">{{user.id}}</option> <!--pobieramy z bazy userów i listujemy-->
+    </select><br>
+
+    <label for="categoryDescribtion">Opis:</label>
+    <textarea [(ngModel)]="category.describtion" rows="4" cols="50"
+              id="categoryDescribtion" name="categoryDescribtion" required></textarea><br>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!formDetails.valid">Wyślij</button>
+  </div>
+</form>

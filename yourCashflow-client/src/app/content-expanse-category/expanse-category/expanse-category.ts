@@ -5,7 +5,7 @@ export class ExpanseCategory{
   describtion: string;
   dateOfCreate: Date;
 
-  constructor(name: string, userId: number, describtion: string){
+  constructor(name?: string, userId?: number, describtion?: string){
     this.name = name;
     this.userId = userId;
     this.describtion = describtion;

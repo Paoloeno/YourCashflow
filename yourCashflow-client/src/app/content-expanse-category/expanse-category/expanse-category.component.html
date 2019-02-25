@@ -1,0 +1,54 @@
+<div>
+  <h2>{{expanseCategory.name | firstCapital}}</h2>
+  <p>{{expanseCategory.describtion | firstCapital}}</p><br>
+  <span>Łącznie na {{expanseCategory.name}} wydaleś <b>{{totalAmount | number: '1.2-2'}}</b> zł</span><br><br>
+</div>
+<div>
+  <table class="table mx-auto">
+    <tr>
+      <th>#</th>
+      <th>Nazwa wydatku</th>
+      <th>Opis</th>
+      <th>Kwota</th>
+      <th>Data operacji</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let expanse of expanses">
+      <td>{{expanse.id}}</td>
+      <td>{{expanse.name | firstCapital}}</td>
+      <td>{{expanse.describtion | firstCapital}}</td>
+      <td>{{expanse.amount | number: '1.2-2'}} zł</td>
+      <td>{{expanse.dateOfTransaction | date: 'dd/MM/yyyy'}}</td>
+      <td><button class="btn btn-danger container-fluid" (click)="deleteExpanse(this.expanse.id)">Usuń</button></td>
+    </tr>
+  </table>
+
+  <table class="table">
+  <tr>
+    <form (ngSubmit)="createExpanse()">
+    <td>#</td>
+    <td><input [(ngModel)]="expanse.name" id="expanseName" name="name"
+                class="container-fluid" placeholder="Nazwa"></td>
+    <td><input [(ngModel)]="expanse.describtion" id="expanseDescribtion" name="describtion"
+                class="container-fluid" placeholder="Opis"></td>
+    <td><input [(ngModel)]="expanse.amount" id="expanseAmount" name="amount"
+                class="container-fluid" placeholder="Kwota"></td>
+    <td><input [(ngModel)]="expanse.dateOfTransaction" type="date" id="dateOfTransaction"
+                name="dateOfTransaction" class="container-fluid"></td>
+    <td><button type="submit" class="btn btn-success container-fluid">Dodaj</button></td>
+    </form>
+  </tr>
+  </table>
+<!--
+  <table class="table">
+  <tr>
+    <td>#</td>
+    <td><input id="expanseName" class="container-fluid" placeholder="Nazwa"></td>
+    <td><input id="expanseDescribtion" class="container-fluid" placeholder="Opis"></td>
+    <td><input id="expanseAmount" class="container-fluid" placeholder="Kwota"></td>
+    <td><input type="date" id="dateOfTransaction" class="container-fluid"></td>
+    <td><button (click)="createExpanse()" class="btn btn-success container-fluid">Dodaj</button></td>
+  </tr>
+  </table>
+  -->
+</div>

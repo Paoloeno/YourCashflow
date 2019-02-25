@@ -10,7 +10,6 @@
       <ul class="collapse list-unstyled" id="homeSubmenu">
 
         <li *ngFor="let category of categories">
-          <!-- <a routerLink="/Category-Overview/{{category.id}}">{{category.name}}</a> -->
           <a [routerLink]="['/Category-Overview', category.id]">{{category.name}}</a>
         </li>
 

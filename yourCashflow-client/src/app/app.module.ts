@@ -1,30 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './pages/user/user.component';
-import { ExpanseCategoryComponent } from './pages/expanse-category/expanse-category.component';
-import { ExpanseComponent } from './pages/expanse/expanse.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { AddCategoryComponent } from './pages/expanse-category/add-category/add-category.component';
-import { AddExpanseComponent } from './pages/expanse-category/add-expanse/add-expanse.component';
+import { UserComponent } from './user/user.component';
+import { ExpanseCategoryComponent } from './content-expanse-category/expanse-category/expanse-category.component';
+//import { ExpanseComponent } from './content-expanse-category/expanse-category/expanse/expanse.component';
 import { FirstCapitalPipe } from './pipes/first-capital.pipe';
-import { DeleteExpanseComponent } from './pages/expanse-category/delete-expanse/delete-expanse.component';
+import { AddCategoryComponent } from './content-expanse-category/expanse-category/add-category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SidebarComponent,
     UserComponent,
     ExpanseCategoryComponent,
-    ExpanseComponent,
-    SidebarComponent,
-    AddCategoryComponent,
-    AddExpanseComponent,
+    /*ExpanseComponent,*/
     FirstCapitalPipe,
-    DeleteExpanseComponent
+    AddCategoryComponent
   ],
   imports: [
     BrowserModule,

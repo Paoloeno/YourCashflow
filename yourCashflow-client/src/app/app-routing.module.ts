@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AddCategoryComponent } from './pages/expanse-category/add-category/add-category.component';
-import { ExpanseCategoryComponent } from './pages/expanse-category/expanse-category.component';
+
+import { ExpanseCategoryComponent } from './content-expanse-category/expanse-category/expanse-category.component';
+import { AddCategoryComponent } from './content-expanse-category/expanse-category/add-category.component';
 
 const routes: Routes = [
   {
