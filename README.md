@@ -6,6 +6,8 @@ Docelowo aplikacja dostarczy funkcjonalność generowania raportów finansowych 
 
 ## Technologie
 
-Front-end: Angular 7 / TypeScript
-Back-end: Java 8 / SpringBoot / Spring Data
-Baza danych: MySQL
+**Front-end:** Angular 7 / TypeScript
+
+**Back-end:** Java 8 / SpringBoot / Spring Data
+
+**Baza danych:** MySQL
