@@ -25,6 +25,18 @@ export class ExpanseService {
       .then(response => response as Expanse[]);
     }
 
+    findLastMonthExpansesByCategory(id: number): Promise<Array<Expanse>>{
+      return this.http.get(this.apiUrl + "/findByCategoryId/" + id + "/last-month")
+      .toPromise()
+      .then(response => {return response as Expanse[];});
+    }
+
+    findThisMonthExpansesByCategory(id: number): Promise<Array<Expanse>>{
+      return this.http.get(this.apiUrl + "/findByCategoryId/" + id + "/this-month")
+      .toPromise()
+      .then(response => {console.log(response); return response as Expanse[];});
+    }
+
     deleteExpanse(id: number): Promise<void> {
       const url = this.apiUrl + '/' + id;
       return this.http.delete(url)
